@@ -1,0 +1,44 @@
+URxvt.foreground: #FFFFFF
+URxvt.background: #000000
+URxvt.cursorUnderLine:  1
+! URxvt.color30: rgb:f2/f2/f2
+
+!  Added by ThF on 2017-06-07
+ 
+
+
+URxvt.xftAntialias: true
+URxvt.font: xft:inconsolata:size=13:antialias=true:hingting=true, xft:dejavu sans mono:pixelsize:13:antialias=true:hingtingl=true
+URxvt.boldFont: xft:inconsolata:size=13:antialias=true:hingting=true, xft:dejavu sans mono:pixelsize:13:antialias=true:hingtingl=true
+URxvt.italicFont: xft:inconsolata:size=13:antialias=true:hingting=true, xft:dejavu sans mono:pixelsize:13:antialias=true:hingtingl=true
+URxvt.bolditalicFont: xft:inconsolata:size=13:antialias=true:hingting=true, xft:dejavu sans mono:pixelsize:13:antialias=true:hingtingl=true
+
+URxvt*jumpScroll: true
+URxvt*scrollBar: false
+URxvt*scrollTtyKeypress: true
+URxvt.scrollstyle: plain
+URxvt.secondaryScroll: true
+
+! Added by ThF on 2017-03-30
+URxvt.pointerBlank: true
+URxvt.pointerBlankDelay: 987654321
+
+! Added by ThF on 2017-06-07
+URxvt.saveLines:    8192
+ 
+!  Added by ThF on 2017-06-07
+! URxvt.perl-ext-common: font-size,selection-to-clipboard
+URxvt.perl-ext-common: default,selection-autotransform,selection-pastebin,xim-onthespot,remote-clipboard
+URxvt.insecure: true
+URxvt.pastableTabs: false
+
+
+! man pages in color
+URxvt.colorIT:  rgb:87/af/5f
+URxvt.colorBD:  rgb:d7/d7/d7
+URxvt.colorUL:  rgb:87/af/d7
+
+! mappings
+! move one screen up ($LINES minus 3 = 68)
+! URxvt.keysym.Control-y: \033]720;68ST
+URxvt.keysym.Control-y: \033]2;uuuuuuuuuuu ST
