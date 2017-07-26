@@ -12,6 +12,22 @@ elif [[ $TERM=linux ]]; then
     nv="nvim"
 fi
 
+# function removing unwanted $HOME directories all in one go{{{
+#  Added by ThF on 2017-07-25
+function clean_home()
+{
+if [ "$PWD" != "/home/thf" ]; then
+    print "Not in /home/thf directory; exiting."
+    return 0
+fi
+for item in ./**/; do
+    [ -d $item/\$HOME ] || continue
+    rm -rf $item/\$HOME
+    print "removed a directory in $item"
+done }
+# }}}
+clean_home
+
 source /etc/profile.d/autojump.zsh
 
 # alias ev="$nv /home/thf/.config/nvim/init.vim"
@@ -75,6 +91,13 @@ source /usr/bin/aws_zsh_completer.sh
 
 eval "$(dircolors /etc/DIR_COLORS)"
 export PS1=${PS1/\@\%U\%m\%u/}
+
+
+
+#  Added by ThF on 2017-07-24
+#  Keychain helps to manage SSH and GPG keys in a convenient & secure manner.
+#  From www.funtoo.org/Keychain
+eval `keychain --eval ssh github_rsa`
 
 
 echo "$HOME/.zshrc has been sourced."

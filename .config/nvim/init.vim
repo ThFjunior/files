@@ -101,8 +101,8 @@ set novisualbell
 if $TERM == 'linux'
     colorscheme gotham
 else
-    "colorscheme gotham256
-    colorscheme desert
+    colorscheme gotham256
+    " colorscheme desert
 endif
 
 
@@ -136,7 +136,7 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
-nnoremap <CR> :nohlsearch<CR>
+" nnoremap <CR> :nohlsearch<CR>
 nnoremap <Leader>e :edit ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>s :source ~/.config/nvim/init.vim<CR>
 " nmap H 5h
